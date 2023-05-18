@@ -1,4 +1,7 @@
 B = read.csv("/home/nathan/SINC/DataApplication/Estimated_CytoMicro_Edge_Prob.csv",header = F)
+otu_order = read.txt("./otu_order.txt")
+Cyt_names = read.txt("./Cytokine_names.txt")
+otu_names = read.csv("./otu_names.csv",header = F)
 
 B_edges = (abs(B) > 0.50)*1
 B_edges = B_edges[otu_order,]
